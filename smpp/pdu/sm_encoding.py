@@ -35,7 +35,7 @@ class SMStringEncoder:
         if data_coding.scheme == DataCodingScheme.DEFAULT:
             unicodeStr = None
             if data_coding.schemeData in [DataCodingDefault.SMSC_DEFAULT_ALPHABET, DataCodingDefault.IA5_ASCII]:
-                unicodeStr = smStrBytes.decode('ascii', "replace")
+                unicodeStr = smStrBytes.decode('ascii')
             elif data_coding.schemeData == DataCodingDefault.UCS2:
                 unicodeStr = smStrBytes.decode('UTF-16BE', "replace")
             elif data_coding.schemeData == DataCodingDefault.LATIN_1:
